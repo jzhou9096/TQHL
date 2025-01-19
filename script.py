@@ -9,8 +9,8 @@ if GITHUB_TOKEN is None:
     exit(1)
 
 REPO_NAME = "jzhou9096/jilianip"  # 替换为你的仓库
-FILE_PATH = "FLJAPI.txt"  # 替换为文件路径（如 data.txt）
-WEBPAGE_URL = "https://tqyb.jzhou9096.workers.dev"  # 替换为目标网页 URL
+FILE_PATH = "jilianip.txt"  # 替换为文件路径（如 data.txt）
+WEBPAGE_URL = "https://tq5g.jzhou9096.workers.dev"  # 替换为目标网页 URL
 
 def fetch_webpage_content(url):
     import requests
