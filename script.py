@@ -8,10 +8,10 @@ if GITHUB_TOKEN is None:
     print("Error: MY_GITHUB_TOKEN is not set.")
     exit(1)
 
-# 使用环境变量或默认值
-REPO_NAME = os.getenv("REPO_NAME")  # 替换为你的仓库
-FILE_PATH = os.getenv("FILE_PATH")  # 替换为文件路径
-WEBPAGE_URL = os.getenv("WEBPAGE_URL")  # 替换为目标网页 URL
+# 直接从环境变量获取，若未设置则报错
+REPO_NAME = os.getenv("REPO_NAME")
+FILE_PATH = os.getenv("FILE_PATH")
+WEBPAGE_URL = os.getenv("WEBPAGE_URL")
 
 if not REPO_NAME or not FILE_PATH or not WEBPAGE_URL:
     print("Error: One or more required environment variables (REPO_NAME, FILE_PATH, WEBPAGE_URL) are not set.")
