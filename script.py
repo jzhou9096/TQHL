@@ -13,6 +13,11 @@ REPO_NAME = os.getenv("REPO_NAME")
 FILE_PATH = os.getenv("FILE_PATH")
 WEBPAGE_URL = os.getenv("WEBPAGE_URL")
 
+# 调试代码：打印环境变量（可以删除）
+print(f"DEBUG: REPO_NAME={REPO_NAME}")
+print(f"DEBUG: FILE_PATH={FILE_PATH}")
+print(f"DEBUG: WEBPAGE_URL={WEBPAGE_URL}")
+
 if not REPO_NAME or not FILE_PATH or not WEBPAGE_URL:
     print("Error: One or more required environment variables (REPO_NAME, FILE_PATH, WEBPAGE_URL) are not set.")
     exit(1)
