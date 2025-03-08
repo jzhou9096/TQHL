@@ -2,13 +2,12 @@ import os
 from github import Github
 
 # 获取 GitHub Token（使用自定义 secret）
-GITHUB_TOKEN = os.getenv("MY_GITHUB_TOKEN")  # 获取环境变量
-
-if GITHUB_TOKEN is None:
+GITHUB_TOKEN = os.getenv("MY_GITHUB_TOKEN")
+if not GITHUB_TOKEN:
     print("Error: MY_GITHUB_TOKEN is not set.")
     exit(1)
 
-# 直接从环境变量获取，若未设置则报错
+# 从环境变量获取，未设置则直接报错
 REPO_NAME = os.getenv("REPO_NAME")
 FILE_PATH = os.getenv("FILE_PATH")
 WEBPAGE_URL = os.getenv("WEBPAGE_URL")
