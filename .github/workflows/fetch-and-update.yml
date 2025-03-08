@@ -32,9 +32,12 @@ jobs:
     # Step 4: 运行 Python 脚本
     - name: Run script
       env:
-        MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-        REPO_NAME: ${{ vars.REPO_NAME }}
-        FILE_PATH: ${{ vars.FILE_PATH }}
-        WEBPAGE_URL: ${{ vars.WEBPAGE_URL }}
-      
-      run: python script.py
+       MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+       REPO_NAME: ${{ vars.REPO_NAME }}
+       FILE_PATH: ${{ vars.FILE_PATH }}
+       WEBPAGE_URL: ${{ vars.WEBPAGE_URL }}
+      run: |
+       echo "DEBUG: REPO_NAME=${REPO_NAME}"
+       echo "DEBUG: FILE_PATH=${FILE_PATH}"
+       echo "DEBUG: WEBPAGE_URL=${WEBPAGE_URL}"
+       python script.py
