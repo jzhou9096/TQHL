@@ -13,7 +13,7 @@ REPO_NAME = os.getenv("REPO_NAME")
 FILE_PATH = os.getenv("FILE_PATH")
 WEBPAGE_URL = os.getenv("WEBPAGE_URL")
 
-# 调试代码：打印环境变量（可以删除）
+# 调试输出
 print(f"DEBUG: REPO_NAME={REPO_NAME}")
 print(f"DEBUG: FILE_PATH={FILE_PATH}")
 print(f"DEBUG: WEBPAGE_URL={WEBPAGE_URL}")
